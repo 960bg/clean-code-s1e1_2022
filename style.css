@@ -22,7 +22,7 @@ ul {
 }
 
 
-.aaa {
+.header {
     width: 500px;
     margin: 0 auto;
     display: block;
@@ -30,33 +30,38 @@ ul {
 }
 
 
-.aaa img {
+.header__img {
     width: 100%;
 }
 
-.aaa .more_inf {
-    font-family: fantasy, cursive;
+.h1 {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.link {
+    font-family: cursive, fantasy;
 }
 
 @media (max-width:768px) {
-    .aaa {
+    .header {
         text-align: center;
     }
 }
 
-.centered-main-page-element {
+.main {
     display: block;
     width: 500px;
     margin: 0 auto;
 }
 
-.task {
-    width: 56%;
-    display: inline-block;
-    flex-grow: 1
+
+.new-task {
+    /* width: 318px; */
 }
 
-.task-row-wrapper {
+
+.block-add__task-row-wrapper {
     display: flex;
 }
 
@@ -65,8 +70,7 @@ ul {
     padding: 0px;
 }
 
-li,
-h3 {
+li {
     list-style: none;
 }
 
@@ -75,7 +79,7 @@ button {
     outline: none;
 }
 
-button {
+.button {
     background: none;
     border: 0;
     color: #888;
@@ -85,8 +89,8 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    color: #3a3A3a;
+.button:hover {
+    color: #3a3a3a;
 }
 
 /* Heading */
@@ -100,7 +104,20 @@ button:hover {
     text-transform: uppercase;
 }
 
-input[type="text"] {
+/* New Task */
+.h3_block-add {
+    margin: 0 0 20px;
+}
+
+.task {
+    width: 56%;
+    display: inline-block;
+    flex-grow: 1
+}
+
+.task-input {
+    display: inline-block;
+    flex-grow: 1;
     margin: 0;
     font-size: 18px;
     line-height: 18px;
@@ -110,22 +127,36 @@ input[type="text"] {
     background: #ffffff;
     border-radius: 6px;
     font-family: Lato, sans-serif;
-    color: #888;
+    color: #888888;
 }
 
-input[type="text"]:focus {
-    color: #333;
+/* input[type="text"] {
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+    height: 21px;
+    padding: 0 9px;
+    border: 1px solid #dddddd;
+    background: #ffffff;
+    border-radius: 6px;
+    font-family: Lato, sans-serif;
+    color: #888888;
+} */
+
+.task-input:focus {
+    color: #333333;
 }
+
+/* input[type="text"]:focus {
+    color: #333333;
+} */
 
 /* New Task */
-label[for='new-task'] {
+/* label[for='new-task'] {
     display: block;
     margin: 0 0 20px;
-}
+} */
 
-input#new-task {
-    width: 318px;
-}
 
 /* Task list */
 .task-item {
@@ -138,9 +169,9 @@ input#new-task {
     align-items: center;
 }
 
-li > * {
+/* li > * {
     vertical-align: middle;
-}
+} */
 
 li > label {
     padding-left: 10px;
@@ -149,9 +180,13 @@ li > label {
     width: 226px;
 }
 
-li > input[type="text"] {
-    width: 226px
+li > .task-input {
+    width: 226px;
 }
+
+/* li > input[type="text"] {
+    width: 226px
+} */
 
 button.delete img {
     height: 2em;
@@ -164,20 +199,30 @@ button.delete img:hover {
 }
 
 /* Completed */
-ul#completed-tasks label {
-    text-decoration: line-through color: #888;
+.block-complete__completed-tasks label {
+    text-decoration: line-through;
+    color: #888888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
+ul li .task-input {
     display: none
 }
 
-ul li.editMode input[type=text] {
+/* ul li input[type=text] {
+    display: none
+} */
+
+ul li.edit-mode-task .task-input {
     display: inline-block;
     width: 224px
 }
 
-ul li.editMode label {
+/* ul li.editMode input[type=text] {
+    display: inline-block;
+    width: 224px
+} */
+
+ul li.edit-mode-task label {
     display: none;
 }
