@@ -8,12 +8,6 @@ button {
     outline: none;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-
 /* Basic Style */
 .body {
     background-color: #f8f8f8;
@@ -68,14 +62,6 @@ ul {
     padding: 0px;
 }
 
-li {
-    list-style: none;
-}
-
-input,
-button {
-    outline: none;
-}
 
 .button {
     background: none;
