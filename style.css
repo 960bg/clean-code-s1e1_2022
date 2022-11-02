@@ -8,9 +8,14 @@ button {
     outline: none;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 
 /* Basic Style */
-body {
+.body {
     background-color: #f8f8f8;
     color: #333333;
     font-family: Lato, sans-serif;
@@ -45,26 +50,16 @@ body {
 .main {
     display: block;
     width: 500px;
-    margin: 0 auto 0;
-}
-
-.new-task {
-    /* width: 318px; */
+    margin: 0 auto;
 }
 
 .block-add__task-row-wrapper {
     display: flex;
 }
 
-ul {
-    margin: 0;
-    padding: 0px;
-}
-
-
 .button {
     background: none;
-    border: 0px;
+    border: 0;
     color: #888;
     font-size: 15px;
     width: 60px;
@@ -92,13 +87,13 @@ ul {
     margin: 0 0 20px;
 }
 
-.task {
+.task-item__label {
     width: 56%;
     display: inline-block;
     flex-grow: 1;
 }
 
-.task-input {
+.task-item__input {
     display: inline-block;
     flex-grow: 1;
     margin: 0;
@@ -113,12 +108,12 @@ ul {
     color: #888888;
 }
 
-.task-input:focus {
+.task-item__input:focus {
     color: #333333;
 }
 
 /* Task list */
-li {
+.task-item {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
@@ -128,28 +123,24 @@ li {
     align-items: center;
 }
 
-li > input[type="checkbox"] {
+.task-item__checkbox {
     margin: 0 10px;
 }
 
-li > label {
+.task-item__label {
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 18px;
     width: 226px;
 }
 
-li > .task-input {
-    width: 226px;
-}
-
-button.bt-edit-delete img {
+.bt-edit-delete img {
     height: 2em;
     transform: rotateZ(45deg);
     transition: transform 200ms ease-in;
 }
 
-button.bt-edit-delete img:hover {
+.bt-edit-delete img:hover {
     transform: rotateZ(0);
 }
 
@@ -160,15 +151,15 @@ button.bt-edit-delete img:hover {
 }
 
 /* Edit Task */
-ul li .task-input {
+.task-item .task-item__input {
     display: none;
 }
 
-ul li.edit-mode-task .task-input {
+.task-item_edit-mode .task-item__input {
     display: inline-block;
     width: 224px;
 }
 
-ul li.edit-mode-task label {
+.task-item_edit-mode .task-item__label {
     display: none;
 }
