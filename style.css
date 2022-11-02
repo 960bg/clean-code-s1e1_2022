@@ -136,13 +136,13 @@ ul {
     width: 226px;
 }
 
-.bt-edit-delete img {
+.bt-delete__img {
     height: 2em;
     transform: rotateZ(45deg);
     transition: transform 200ms ease-in;
 }
 
-.bt-edit-delete img:hover {
+.bt-delete__img:hover {
     transform: rotateZ(0);
 }
 
