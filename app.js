@@ -148,7 +148,6 @@ var taskIncomplete = function () {
 }
 
 
-
 var ajaxRequest = function () {
     console.log("AJAX Request");
 }
