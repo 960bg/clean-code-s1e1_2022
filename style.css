@@ -1,3 +1,14 @@
+/* сброс стилей */
+li {
+    list-style: none;
+}
+
+input,
+button {
+    outline: none;
+}
+
+
 /* Basic Style */
 body {
     background-color: #f8f8f8;
@@ -50,14 +61,6 @@ ul {
     padding: 0px;
 }
 
-li {
-    list-style: none;
-}
-
-input,
-button {
-    outline: none;
-}
 
 .button {
     background: none;
